@@ -3,7 +3,7 @@ import Cards from './components/cards/Cards'
 import Chart from './components/chart/Chart'
 import CountryPicker from './components/countrypicker/CountryPicker'
 import styles from './App.module.css';
-import { fetchData } from "./api"
+import { fetchData } from './api';
 
 
 class App extends React.Component{
@@ -13,11 +13,12 @@ class App extends React.Component{
   }
 
   async componentDidMount(){
-    const fetchData = await fetchData();
+    const fetchedData = await fetchData();
 
-    this.setState({ data: fetchData });
-   
+    this.setState({ data: fetchedData })
   }
+    
+
 
   render(){
     const { data } = this.state;
